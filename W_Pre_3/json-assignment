@@ -1,0 +1,38 @@
+1) Write a Program to validate JSON in Javascript.
+
+. if the input is a Valid Json , return true
+
+e.g 
+
+->  Input : {"company":"Harbinger","Location":"Pune"}
+Output : true
+
+. If the input is invalid Json , return false
+ 
+
+->  Input : { "company" => "Harbinger", "Location" => "Pune" }
+Output : false
+
+
+2) Write a Code in Javascript which will return company name from the given input
+
+input :  var json = '{"company": "Harbinger", "Location": "pune"}'
+Output: Harbinger
+
+
+3) Write a Code in Javascript to  Remove Duplicates In Array Using Javascript
+
+var arrOfObj = [
+  {
+    name:'abc',age:27
+  },
+  {
+    name:'pqr',age:27
+  },
+  {
+    name:'abc',age:27
+  },
+ {
+    name:'abc',age:28
+  },
+ ]

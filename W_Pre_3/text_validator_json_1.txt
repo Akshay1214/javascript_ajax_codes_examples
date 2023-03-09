@@ -1,0 +1,33 @@
+var validjsontext = '{"company":"Harbinger","Location":"Pune"}'; 
+var invalidjsontext = '{ "company" => "Harbinger", "Location" => "Pune" }';
+ 
+console.log("With inValid JSON Text: "+IsValidJSONString(invalidjsontext));
+console.log("With Valid JSON Text: "+IsValidJSONString(validjsontext));
+
+function IsValidJSONString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+
+
+# ====================================================================================
+
+var valid_json_text = '{"company":"Harbinger","Location":"Pune"}'; 
+var invalid_json_text = '{ "company" => "Harbinger", "Location" => "Pune" }';
+ 
+console.log("Is " + valid_json_text + " JSON text valid: " + IsValidJSONString(valid_json_text));
+console.log("Is " + invalid_json_text + " JSON text valid: " + IsValidJSONString(invalid_json_text));
+
+function IsValidJSONString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}

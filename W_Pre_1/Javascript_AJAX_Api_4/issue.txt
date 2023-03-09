@@ -1,0 +1,5 @@
+using javascript and ajax which call API and show
+data into HTML page in well format
+
+API End Point: https://mboum.com/api/v1/ne/news/?
+symbol=AAPL&apikey=demo

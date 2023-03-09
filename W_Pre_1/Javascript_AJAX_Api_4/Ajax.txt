@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Ajax</title>
+    <script>
+      function displayFullName() {
+        var request = new XMLHttpRequest();
+        var url = "https://mboum.com/api/v1/ne/news/? symbol=AAPL&apikey=demo";
+        request.open("GET", url, true);
+        request.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("result").innerHTML = this.responseText;
+            // console.log(this.responseText.data.item.description);
+            console.log(this.responseText.meta.copyright);
+          }
+        };
+        request.send();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="result">
+      <h1>Result</h1>
+    </div>
+    <button type="button" onclick="displayFullName()">Display Full Name</button>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+REST API Assignment Details:
+Assume that you are working on a HRIS application, which tracks the progress of goals of 
+users working in multiple companies.
+1. Document APIs to retrieve, create, update and delete
+Company
+User
+Goal
+Milestone (used to track goal progress)
+2. Document API to upsert above entities
+3. Extend the above REST APIs to support pagination and filtration
+
+==============================================================================================================================================================
+==============================================================================================================================================================
+
+
+REST APIs to retrieve, create, update, and delete for Assignment
+===================================================================
+
+Company:
+GET /companies - Will retrieve a list of all companies
+GET /companies/{id} - Will retrieve a specific company by ID
+POST /companies - Will create a new company
+PUT /companies/{id} - Will update an existing company by ID
+DELETE /companies/{id} - Will delete an existing company by ID
+
+===================================================================
+
+User:
+GET /users - Will retrieve a list of all users
+GET /users/{id} - Will retrieve a specific user by ID
+POST /users - Will create a new user
+PUT /users/{id} - Will update an existing user by ID
+DELETE /users/{id} - Will delete an existing user by ID
+
+===================================================================
+
+Goal:
+GET /goals - Will retrieve a list of all goals
+GET /goals/{id} - Will retrieve a specific goal by ID
+POST /goals - Will create a new goal
+PUT /goals/{id} - Will update an existing goal by ID
+DELETE /goals/{id} - Will delete an existing goal by ID
+
+===================================================================
+
+Milestone:
+GET /milestones - Will retrieve a list of all milestones
+GET /milestones/{id} - Will retrieve a specific milestone by ID
+POST /milestones - Will create a new milestone
+PUT /milestones/{id} - Will update an existing milestone by ID
+DELETE /milestones/{id} - Will delete an existing milestone by ID
+
+===============================================================================================================================================================================
+
+Upsert Company:
+POST /companies - Will create or update a company. If the company with given ID exists, it will be updated, otherwise a new company will be created.
+
+===============================================================================================================================================================================
+
+Upsert User:
+POST /users - Will create or update a user. If the user with given ID exists, it will be updated, otherwise a new user will be created.
+
+===============================================================================================================================================================================
+
+Upsert Goal:
+POST /goals - Will create or update a goal. If the goal with given ID exists, it will be updated, otherwise a new goal will be created.
+
+===============================================================================================================================================================================
+
+Upsert Milestone:
+POST /milestones - Will create or update a milestone. If the milestone with given ID exists, it will be updated, otherwise a new milestone will be created.
+
+===============================================================================================================================================================================
+
+APIs with pagination and filtration:
+GET /companies?page={page}&limit={limit}&name={name}&status={status} - Will retrieve a list of companies with pagination and optional name and status filtration.
+GET /users?page={page}&limit={limit}&name={name}&email={email} - Will retrieve a list of users with pagination and optional name and email filtration.
+GET /goals?page={page}&limit={limit}&name={name}&company_id={company_id} - Will retrieve a list of goals with pagination and optional name and company ID filtration.
+GET /milestones?page={page}&limit={limit}&goal_id={goal_id}&status={status} - Will retrieve a list of milestones with pagination and optional goal ID and status filtration.
+
+===============================================================================================================================================================================

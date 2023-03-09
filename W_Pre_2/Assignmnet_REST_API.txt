@@ -1,0 +1,16 @@
+REST API Assignment Details:
+
+Assume that you are working on a HRIS application, which tracks the progress of goals of 
+users working in multiple companies.
+
+1. Document APIs to retrieve, create, update and delete
+
+Company
+User
+Goal
+Milestone (used to track goal progress)
+2. Document API to upsert above entities
+
+3. Extend the above REST APIs to support pagination and filtration
+
+Expected to create the route (URLs) only

@@ -1,0 +1,12 @@
+small {
+  color: rgb(255, 0, 0);
+}
+.form-control {
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.registration-div {
+  border: 20px solid #000000;
+  max-width: 600px;
+}
